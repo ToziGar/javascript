@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+ audioEl = document.createElement("audio");
+ audioEl.setAttribute('src','pitido.mp3');
+ document.getElementById('player').appendChild(audioEl);
+ document.getElementById('player').addEventListener('click',function() {
+ document.getElementById('player').innerHTML = 'playing';
+ audioEl.play();
+</script>
+
+<audio src="pitido.mp3" controls></audio>
+
+</head>
+<body>
+</body>
+</html>
