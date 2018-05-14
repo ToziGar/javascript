@@ -2,12 +2,12 @@
 <html>
 <head>
 <script>
- audioEl = document.createElement("audio");
- audioEl.setAttribute('src','pitido.mp3');
- document.getElementById('player').appendChild(audioEl);
+ audio = document.createElement("audio");
+ audio.setAttribute('src','pitido.mp3');
+ document.getElementById('player').appendChild(audio);
  document.getElementById('player').addEventListener('click',function() {
  document.getElementById('player').innerHTML = 'playing';
- audioEl.play();
+ audio.play();
 </script>
 
 <audio src="pitido.mp3" controls></audio>
