@@ -14,7 +14,7 @@
 				    border:1px solid black;
 				    padding: 5px;
 				}
- 
+<!-- Tenemos que poner dropped en estático, esta parte es la más importante, ya que esta clase será añadida a la imagen cuando sea atrapada por el div. -->
 			.dropped {
 			    	position: static !important;
 				}
@@ -25,8 +25,11 @@
 			}
 		</style>
 		<script>
+<!-- La clase moverImagen draggable es la clase que eprmitemover o arrastrar la imágen por la página -->		
 	 $(document).ready(function(){
    	 $(".moverImagen").draggable();
+<!--  Hacemos que la imagen del div se agregue a la clase dropped (recuerda el CSS, sin la posición estática no funcionaría bien) -->
+<!--  y despues se agrega como contenido del div, para ello usamos append -->
      $("#cuadro").droppable({
      drop: function (event, ui) {   
         ui.draggable.addClass("dropped");
