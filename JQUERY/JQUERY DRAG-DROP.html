@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="estilos.css">
+        <title>Drag</title>
+		<style>
+			#cuadro{
+				    width:270px;
+				    height: 200px;
+				    margin: auto;
+				    border:1px solid black;
+				    padding: 5px;
+				}
+ 
+			.dropped {
+			    	position: static !important;
+				}
+
+			img {
+				width:200px;
+				height:200px; 
+			}
+		</style>
+		<script>
+	 $(document).ready(function(){
+   	 $(".moverImagen").draggable();
+     $("#cuadro").droppable({
+     drop: function (event, ui) {   
+        ui.draggable.addClass("dropped");
+        $(this).append(ui.draggable);
+        }
+    });
+ 
+ })
+		</script>
+    </head>
+    <body>
+        <img class="moverImagen" src="http://hd.wallpaperswide.com/thumbs/burning_poker_joker-t2.jpg" alt="">
+        <div id="cuadro"></div>
+    </body>
